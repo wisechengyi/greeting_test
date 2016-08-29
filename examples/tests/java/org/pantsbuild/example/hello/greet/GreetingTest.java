@@ -11,20 +11,17 @@ import static org.junit.Assert.assertTrue;
 
 /* Ensure our greetings are polite */
 public class GreetingTest {
-  @Test
-  public void mentionGreetee() {
+  public void testMentionGreetee() {
     String greetingForFoo = Greeting.greet("Foo");
     assertTrue(greetingForFoo.contains("Foo"));
   }
 
-  @Test
-  public void mentionGreeteeFromResource() throws Exception {
+  public void testMentionGreeteeFromResource() throws Exception {
     String greeting = Greeting.greetFromResource("org/pantsbuild/example/hello/world.txt");
     assertTrue(greeting.contains("Resource World"));
   }
 
-  @Test
-  public void shouldSayHello() {
+  public void testShouldSayHello() {
     String greetingForFoo = Greeting.greet("Foo");
     assertTrue(greetingForFoo.contains("Hello"));
   }
